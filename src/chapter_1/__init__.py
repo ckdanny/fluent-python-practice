@@ -48,9 +48,13 @@ class FrenchDeck:
 
 
 def demo_french_deck(deck: FrenchDeck):
-    def terminate_looping(card):
-        
-
+    """
+    Extra readings: __str__ v.s. __repr__
+    * https://ithelp.ithome.com.tw/articles/10194593
+    * https://stackoverflow.com/a/2626364
+    :param deck:
+    :return:
+    """
     print("Length: ", len(deck))
     print("Accessing item: ", deck[0], deck[-1])
     print("Support slicing -> [:3]: ", deck[:3])
@@ -68,12 +72,10 @@ def demo_french_deck(deck: FrenchDeck):
     print("--- End Iterable ---")
     #
     from random import choice
-    print("Randome pick a card: ", choice(deck), '\n')
+    print("Random pick a card: ", choice(deck), '\n')
     print()
     for card in sorted(deck, key=FrenchDeck.spades_high):
         print(card)
-        if card
-        # pass
 
 
 if __name__ == "__main__":
